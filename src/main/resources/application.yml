@@ -1,0 +1,19 @@
+server:
+  port: '8095'
+
+spring:
+  application:
+    name: exchange
+  profiles:
+    active: ${PROFILE:dev}
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  endpoint:
+    shutdown:
+      enabled: 'true'
+    restart:
+      enabled: 'true'

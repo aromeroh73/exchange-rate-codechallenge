@@ -1,0 +1,16 @@
+spring:
+  config:
+    import: optional:configserver:${CONFIG_SERVER_SVC}
+  cloud:
+    config:
+      profile: prod
+
+eureka:
+  instance:
+    prefer-ip-address: true
+    hostname: eureka-0
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    serviceUrl:
+      defaultZone: ${EUREKA_DEFAULT_ZONE}

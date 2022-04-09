@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: client-service-svc
+spec:
+  selector:
+    app: client-service-app
+  ports:
+    - port: 80
+      targetPort: 8095
